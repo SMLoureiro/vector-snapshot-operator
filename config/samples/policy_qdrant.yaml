@@ -1,0 +1,15 @@
+apiVersion: snapshots.loureiro.io/v1alpha1
+kind: SnapshotPolicy
+metadata:
+  name: qdrant-hourly
+spec:
+  schedule: "0 * * * *"
+  retention: 24
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: qdrant
+  storageRef: local-fs
+  engine: Qdrant
+  qdrant:
+    baseURL: http://qdrant:6333
+    perCollection: false

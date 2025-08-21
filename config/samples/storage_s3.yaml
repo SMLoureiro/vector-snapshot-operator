@@ -1,0 +1,10 @@
+apiVersion: snapshots.loureiro.io/v1alpha1
+kind: SnapshotStorage
+metadata:
+  name: local-fs
+  namespace: default
+spec:
+  type: NFS
+  nfs:
+    server: "localhost"
+    path: "/tmp/vector-snapshots"

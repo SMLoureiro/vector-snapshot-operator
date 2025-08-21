@@ -1,0 +1,8 @@
+apiVersion: snapshots.loureiro.io/v1alpha1
+kind: Snapshot
+metadata:
+  name: manual-20250821
+  namespace: default
+spec:
+  policyRef: qdrant-hourly
+  reason: "Before upgrade"
