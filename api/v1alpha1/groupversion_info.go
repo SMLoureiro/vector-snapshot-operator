@@ -1,3 +1,4 @@
+// +kubebuilder:object:generate=true
 package v1alpha1
 
 import (
@@ -6,7 +7,7 @@ import (
 )
 
 var (
-	GroupVersion  = schema.GroupVersion{Group: "snapshots.yourorg.io", Version: "v1alpha1"}
-	SchemeBuilder = &scheme.Builder{GroupVersion: GroupVersion}
-	AddToScheme   = SchemeBuilder.AddToScheme
+    GroupVersion  = schema.GroupVersion{Group: "snapshots.loureiro.io", Version: "v1alpha1"}
+    SchemeBuilder = &scheme.Builder{GroupVersion: GroupVersion}
+    AddToScheme   = SchemeBuilder.AddToScheme
 )

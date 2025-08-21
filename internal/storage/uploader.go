@@ -1,13 +1,12 @@
 package storage
 
 import (
-    "context"
-    
-    "io"
-    "os"
-    "path/filepath"
+	"context"
+	"io"
+	"os"
+	"path/filepath"
 
-    snapshotv1alpha1 "github.com/SMLoureiro/vector-snapshot-operator/api/v1alpha1"
+	snapshotv1alpha1 "github.com/SMLoureiro/vector-snapshot-operator/api/v1alpha1"
 )
 
 type Uploader interface {

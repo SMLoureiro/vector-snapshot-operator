@@ -5,6 +5,10 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // +kubebuilder:validation:Enum=Qdrant;Weaviate;Milvus;OpenSearch;Vespa;GenericExec
 type EngineType string
 
+// Alias Kubernetes' LabelSelector so drivers can import it via our API package.
+type LabelSelector = metav1.LabelSelector
+
+
 type QdrantConfig struct {
     BaseURL string `json:"baseURL"`
     APIKeySecretRef *SecretKeyRef `json:"apiKeySecretRef,omitempty"`
