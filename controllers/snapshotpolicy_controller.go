@@ -24,8 +24,8 @@ type SnapshotPolicyReconciler struct {
 	Recorder record.EventRecorder
 }
 
-// +kubebuilder:rbac:groups=snapshots.yourorg.io,resources=snapshotpolicies;snapshots,verbs=get;list;watch;create;update;patch;delete
-// +kubebuilder:rbac:groups=snapshots.yourorg.io,resources=snapshotpolicies/status,verbs=get;update;patch
+// +kubebuilder:rbac:groups=snapshots.loureiro.io,resources=snapshotpolicies;snapshots,verbs=get;list;watch;create;update;patch;delete
+// +kubebuilder:rbac:groups=snapshots.loureiro.io,resources=snapshotpolicies/status,verbs=get;update;patch
 // +kubebuilder:rbac:groups="",resources=events,verbs=create;patch
 
 func (r *SnapshotPolicyReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
@@ -75,7 +75,7 @@ func (r *SnapshotPolicyReconciler) Reconcile(ctx context.Context, req ctrl.Reque
 				Name:      "snap-" + time.Now().UTC().Format("20060102-150405"),
 				Namespace: "default",
 				Labels: map[string]string{
-					"snapshots.yourorg.io/policy": pol.Name,
+					"snapshots.loureiro.io/policy": pol.Name,
 				},
 			},
 			Spec: snapshotv1alpha1.SnapshotSpec{

@@ -1,18 +1,18 @@
 package controllers
 
 import (
-    "context"
-    "time"
+	"context"
+	"time"
 
-    snapshotv1alpha1 "github.com/SMLoureiro/vector-snapshot-operator/api/v1alpha1"
-    "github.com/SMLoureiro/vector-snapshot-operator/internal/drivers"
-    "github.com/SMLoureiro/vector-snapshot-operator/internal/storage"
-    metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-    "k8s.io/apimachinery/pkg/runtime"
-    ctrl "sigs.k8s.io/controller-runtime"
-    "sigs.k8s.io/controller-runtime/pkg/client"
-    "sigs.k8s.io/controller-runtime/pkg/log"
-    "k8s.io/client-go/tools/record"
+	snapshotv1alpha1 "github.com/SMLoureiro/vector-snapshot-operator/api/v1alpha1"
+	"github.com/SMLoureiro/vector-snapshot-operator/internal/drivers"
+	"github.com/SMLoureiro/vector-snapshot-operator/internal/storage"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/client-go/tools/record"
+	ctrl "sigs.k8s.io/controller-runtime"
+	"sigs.k8s.io/controller-runtime/pkg/client"
+	"sigs.k8s.io/controller-runtime/pkg/log"
 )
 
 type SnapshotReconciler struct {
@@ -21,8 +21,8 @@ type SnapshotReconciler struct {
     Recorder record.EventRecorder
 }
 
-// +kubebuilder:rbac:groups=snapshots.yourorg.io,resources=snapshots;snapshotpolicies;snapshotstorages,verbs=get;list;watch;update;patch
-// +kubebuilder:rbac:groups=snapshots.yourorg.io,resources=snapshots/status,verbs=get;update;patch
+// +kubebuilder:rbac:groups=snapshots.loureiro.io,resources=snapshots;snapshotpolicies;snapshotstorages,verbs=get;list;watch;update;patch
+// +kubebuilder:rbac:groups=snapshots.loureiro.io,resources=snapshots/status,verbs=get;update;patch
 // +kubebuilder:rbac:groups="",resources=pods;secrets;events,verbs=get;list;watch
 // +kubebuilder:rbac:groups="",resources=events,verbs=create;patch
 

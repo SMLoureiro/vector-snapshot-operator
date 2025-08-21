@@ -1,3 +1,3 @@
 // +kubebuilder:object:generate=true
-// +groupName=snapshots.yourorg.io
+// +groupName=snapshots.loureiro.io
 package v1alpha1

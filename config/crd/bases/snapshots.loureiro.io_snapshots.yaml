@@ -4,9 +4,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.18.0
-  name: snapshots.snapshots.yourorg.io
+  name: snapshots.snapshots.loureiro.io
 spec:
-  group: snapshots.yourorg.io
+  group: snapshots.loureiro.io
   names:
     kind: Snapshot
     listKind: SnapshotList
